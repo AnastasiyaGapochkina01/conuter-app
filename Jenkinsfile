@@ -31,7 +31,7 @@ pipeline {
 
         stage('Checkout repo') {
             steps {
-                git branch: 'main', url: "${env.GIT_URL}", credentialId: 'jenkins-key'
+                git branch: 'main', url: "${env.GIT_URL}", credentialsId: 'jenkins-key'
             }
         }
 
