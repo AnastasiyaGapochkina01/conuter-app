@@ -60,7 +60,7 @@ pipeline {
                     sshCommand remote: remote, command: """
                         docker pull ${env.REPO}:${params.TAG}
                         cd ${env.PRJ_DIR}
-                        python3 set_env.py
+                        python3 set_env.py ${env.REPO}:${params.TAG}
                         docker compose up -d
                     """
                 }
